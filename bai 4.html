@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="demo" height="1280" width="800" style="border: 1px"></canvas>
+<script>
+    class rectangle {
+        constructor(x, y, width, height, color) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.color = color;
+        }
+        render(){
+            let ctx = document.getElementById("demo").getContext("2d");
+            ctx.fillStyle = this.color;
+            ctx.fillRect(this.x,this.y, this.width, this.height);
+
+        }
+    }
+
+    let hcn = new rectangle(10, 10,Math.random()*150 , Math.random()*150,"#ff0000");
+    hcn.render();
+
+
+</script>
+
+</body>
+</html>
